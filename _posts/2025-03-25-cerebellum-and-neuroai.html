@@ -1,0 +1,40 @@
+---
+layout: post
+title: Cerebellum & NeuroAI approach
+date: 2025-03-25 09:00:00 +0900
+excerpt_text: 1. 생물학적 신경망과 인공신경망 양 분야를 아우르는 neuroAI 분야에서 역전파(backpropagation) 알고리즘은 언제나 "biologically implausible"한 아쉬운 불일치 포인트다. 생물학적으로 "plausible"한 hebbian rule…
+cover: /assets/img/blog/cerebellum-and-neuroai/01-t.webp
+---
+<p>1.</p>
+<p>생물학적 신경망과 인공신경망 양 분야를 아우르는 neuroAI 분야에서 역전파(backpropagation) 알고리즘은 언제나 &quot;biologically implausible&quot;한 아쉬운 불일치 포인트다. 생물학적으로 &quot;plausible&quot;한 hebbian rule 같은걸 인공신경망에 적용을 해보기도 하지만, 경쟁력 있는 ai 모델들은 성능때문에 결국 역전파 알고리즘을 쓰는게 현실이다.</p>
+<p>그런데 생물학적 신경망중에 AI의 신경망 학습 기전이 너무나 깔끔하게 맞아들어가는, 그래서 계산모델의 학습규칙에 인공과 생물간 불일치가 거의 없는 신경망이 있으니,  바로 소뇌(cerebellum)다. 소뇌가 역전파를 쓰는건 아니고, 단층인공신경망에서 개발된 delta rule(혹은 LMS rule)이라는걸 소뇌가 쓴다.</p>
+<p>소뇌의 granule layer에는 뇌 전체의 무려 80%에 달하는 신경세포가 밀집되어있는데 (대뇌 쨉도 안됨), 이 graunule cell들에서 뻗은 parrallel fiber들이 빔처럼 달리며 크고 납작한 purkinje cell들의 무성한 가지들과 수직방향으로 컨택하고 지나간다(전선들이 송전탑 지나가는걸 떠올리면 비슷). 이들 시냅스를 pf-pc synapse라고 부르는데 이 시냅스들의 가중치가 학습을 위해 변화하여 pc(purkinje cell)의 출력이 조절되는 현상은 고차원의 인풋을 단일 출력으로 바꾸는 함수의 가중치 조절로 이해될수 있고, 사실 그 유명한 통계학의 MLR(multiple linear regression)에 다름 아니다.</p>
+<p>좀 더 생각해보면 granule layer는 이미 그 전의 인풋을 받아 엄청나게 고차원공간으로 맵핑을 하고 있는 상태이므로, 복잡도 높은 표현을 위해 데이터를 고차원의 feature들로 변환시키고 이어 퍼킨지 세포가 고차원 데이터를 선형회귀모델로 예측하는 상황이라고 볼 수 있다.</p>
+<p>adaptive filter model이라는 소뇌의 대표적인 계산모델에선 pf-pc 시냅스의 가중치 조절을 위해 퍼킨지세포의 출력을 정답과의 편차제곱(y-y예측값)^2을 최소화시키는 문제로 모델링하는데, 회귀분석의 최소자승법을 normal equation 대신, SGD(stochastic gradient descent)로 푸는 방법과 수학적으로 완전히 일치한다. SGD에서 미분값인 gradient 벡터의 i 번째 gradient는 학습률*(y-y예측값)*x_i 가 되는데, error를 의미하는 (y-y예측값)의 시그널은 climbing fiber가 전달하고, x_i는 해당 가중치로 들어오는 pf의 입력값이 된다.</p>
+<p>정말 놀랍게도, 신경생리학적으로 실제 pf, climbing fiber의 pairng이 일어나면 모델의 예측결과대로 pf 입력값에 따라 LTD가 일어남이 확인되었다.</p>
+<p>그러니 소뇌는 역전파알고리즘처럼 찜찜한 구석 없이 인공신경망의 모형이 생물학적 신경망의 학습규칙을 너무나 잘 설명해주는 예인셈</p>
+<p>2.</p>
+<p>소뇌신경망의 학습원리와 단층인공신경망에서의 SGD 기반 학습법(delta rule), 통계학의 회귀분석과 최소자승법. 이 복잡한 관련성이 어떻게 생긴건지 역사적으로 추적해보면 매우 흥미롭다.(어쩔수 없이 한의사라 그른가, 다양한 아이디어가 섞이며 기술이 발전하는 역사공부가 재밌다)</p>
+<p>일단 gradient descent란 기법 자체는 1800년대 중반 그 유명한 프랑스의 코시(코시-슈바르츠 부등식의 그 코시 맞음)가 함수의 미니멈값을 구하는 방법으로 제안했다고 함. 그런데 그냥 순수 수학적 작업이었고...</p>
+<p>1950년대 통계 쪽의 회귀분석 연구과정에서 어느정도의 인식이 있었던것 같다. 그러나 이건 머신러닝 쪽 외에서의 일이었으므로 실제 우리가 머신러닝에서 쓰는 gradient descent의 역사로 보기는 무리일것 같고,</p>
+<p>본격적으로 머신러닝에 활용된건 1960년 스탠포드의 Widrow &amp; Hoff 가 ADALINE이란 단층신경망 모형을 개발하면서부터다. ADALINE은 단층 신경망이면서 아웃풋이 연속값이므로 사실상 통계학의 다중회귀모형 구조였는데(에러까지 편차제곱으로 정의), SGD를 써서 매 샘플마다 파라미터를 gradeint descent로 업데이트하는 방식을 제안했다. 이걸 delta rule이라고 불렀고, 이후 LMS(least mean squares) 알고리즘이라고도 부르게 되었는데 훗날 70년대에 테렌스 세즈노스키가 같은 식을 에러와 인풋값의 covariance로 해석하는 관점을 소개하며 covariance learning rule이라고도 불리게 되었다.</p>
+<p>암튼, 머신러닝에 gradient descent 기법이 처음 적용된건 ADALINE이었고, 이건 사실상 통계의 MLR의 신경망적 구현 + 수치적 접근이었던것. 80년대 럼멜하트 등이 역전파 알고리즘을 제안할 때도 이걸 delta rule의 일반화라고 표현했다고 하니, 현재 우리가 아는 gradient descent의 세상이 분명 1960년 Widrow &amp; Hoff로 부터 시작된게 맞는것 같다.</p>
+<p>1957년 인공신경망의 세상을 연 로젠블랏의 퍼셉트론은 지금도 AI 역사에서 늘 언급이 되는데, 저 유명한 gradient descent를 머신러닝 세계에 소개한 ADALINE 모델이 세간에 많이 언급되지 않는것은 아쉬운 일이다.</p>
+<p>3.</p>
+<p>더욱 놀라운건, 마빈 민스키가 퍼셉트론 기반의 인공신경망을 맹공격하여 가사상태로 만든 이후에도 ADALINE 방식의 모델들은 신호처리 분야에서 꽃을 피우며 공학적으로 잘 나갔다. 이쪽에서 망했지만 저쪽에서 화려하게 잘 나간 셈.</p>
+<p>그리고 더더욱 놀라운건,</p>
+<p>1980년대 초 일본의 Fusita에 의해 adaptive filter model이 제안되며 이전까지 Marr, Albus, Ito 등에 의해 다듬어져오던 소뇌의 계산적 모델이 ADALINE의 delta rule을 받아들여 (글 서두에 강조했다시피) 생물학적 신경망과 인공신경망이 정말 같은 방식으로 학습을 하는 모델로서 수렴하게 됐다는것이다.</p>
+<p>80년대 이후 지금까지도 다양한 소뇌의 계산모델들이 제안되고 있지만 delta  learning rule을 기반으로 한 adaptive filter model은 여전히 강력하다.</p>
+<p>좀 심하게 말하면 &quot;소뇌는 다중회귀분석을 SGD 기반으로 풀고 있다&quot;고 할수 있다. 그리고 나아가 &quot;이 다중회귀분석의 독립변수들은 미리 트랜스폼된 고차원의 변수들&quot;인셈.</p>
+<p>4.</p>
+<p>그리고 최근 내가 이 모델에 응당 포함되어야 하는, 그리고 실제 실험적으로, 계산 모델 수준에서 다양한 방식으로 포착되어왔지만 아무도 통계 모형 관점으로 해석해내지 못했던 요소를 추가로 발견했다.</p>
+<p>granule layer에 의해 expansion된 고차원 공간을, 소뇌는 과적합을 만들지 않고 어떻게 컨트롤해내고 있는가? 에 대한 통계학습이론적 답이 될수 있을것 같다.</p>
+<p>이걸 후다닥 이론전개로만 소박하게 논문을 써야 할지, 공동연구로 실험을 함께 해서 큰걸로 만들어야 할지 매우 고민된다. 5년전에 비슷한 사건이 있었는데, 그때는 실험과 함께 가는 길을 택했고, 똘똘한 박사과정생의 학위기간을 통으로 투입하여 이제서야 진짜 마무리를 눈앞에 두고 있다.</p>
+<p>여튼 행복한 순간이다.</p>
+<p>5.</p>
+<p>앞선 모든 내용은 마지막 자랑을 위한 것처럼 보일수도 있는데, 그게 맞음.</p>
+<div class="post-gallery">
+  <a class="post-shot" href="{{ '/assets/img/blog/cerebellum-and-neuroai/01.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/cerebellum-and-neuroai/01-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/cerebellum-and-neuroai/02.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/cerebellum-and-neuroai/02-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/cerebellum-and-neuroai/03.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/cerebellum-and-neuroai/03-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+</div>

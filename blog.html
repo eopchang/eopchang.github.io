@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+title_ko: 블로그
+page_id: blog
+permalink: /blog/
+description: Notes by Chang-Eop Kim on NeuroAI, the cerebellum, consciousness and Korean medicine.
+---
+{% include page-head.html lede="NeuroAI, 소뇌, 의식, 그리고 한의학에 대한 김창업 교수의 생각들." %}
+{% assign by_year = site.posts | group_by_exp: 'p', "p.date | date: '%Y'" %}
+
+<div class="wrap blog-index">
+  {% for y in by_year %}
+  <section class="year-block">
+    <h2 class="year-block__year">{{ y.name }}</h2>
+    <ol class="post-list">
+      {% for post in y.items %}
+      <li class="post-row">
+        <a class="post-row__link" href="{{ post.url | relative_url }}">
+          <span class="post-row__date">{{ post.date | date: '%Y. %m' }}</span>
+          <span class="post-row__title">{{ post.title }}</span>
+          {% assign ex = post.excerpt_text | default: post.excerpt | strip_html | strip_newlines | truncate: 150 %}
+          {% if ex != '' %}<span class="post-row__ex">{{ ex }}</span>{% endif %}
+        </a>
+        {% if post.cover %}<img class="post-row__cover" src="{{ post.cover | relative_url }}" alt="" loading="lazy" decoding="async">{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+</div>

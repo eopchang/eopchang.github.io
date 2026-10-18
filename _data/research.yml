@@ -1,0 +1,28 @@
+- id: neuroai
+  title: NeuroAI approach
+  subtitle: A two-way loop of principles
+  body:
+  - Modeling the brain from the vantage point of AI links behavior, physiology, and computation in one framework.
+  - Using explicit objective–learning rule–architecture (normative) models, we explain both the “why” and the “how,” and transfer the resulting design principles into algorithms that improve flexibility, sample efficiency, and robustness.
+  - Day-to-day, that means deriving models, validating them in simulation, and collaborating on experiments that can falsify or refine our claims.
+  - The goal is to bridge elegant math with measurable biology. We do this in close partnership with experimental neuroscientists using state-of-the-art methods.
+  image: /assets/img/research/neuroai.webp
+- id: cerebellum
+  title: Cerebellar computation
+  subtitle: The brain’s general-purpose computation
+  body:
+  - We look beyond motor control and memory.
+  - We believe the cerebellum’s sparse representations, error correction, and predictive processing supply general-purpose computation across widespread brain functions.
+  - With a relatively uniform microcircuit that forms closed loops with many cortical and subcortical areas, it contributes to diverse higher functions—including cognition and emotion.
+  - By projecting information into vast high-dimensional spaces (granular layers) and then efficiently selecting and correcting signals, it may echo phenomena observed in modern deep learning—effective overparameterization, benign overfitting, and double-descent—that classical statistical learning theory struggles to predict.
+  - We test these correspondences to derive principled accounts of cerebellar computation and to translate them into better AI.
+  image: /assets/img/research/cerebellum.webp
+- id: computational-medicine
+  title: Computational Medicine
+  subtitle: Formalizing Korean medicine as a cognitive model
+  body:
+  - Theories in Korean medicine are, at their core, cognitive models formed as physicians abstract patterns from complex cases.
+  - Leveraging cognitive and computational neuroscience with machine learning, we extract, quantify, validate, and formalize these models from data—building an objective, auditable foundation for research and for tools that can support real clinical practice.
+  - We further investigate the mathematical principles that govern interactions among multi-component herbal formulations—how synergy, redundancy, and stability emerge from complex constituents.
+  - Across all projects, we work in close partnership with clinicians and experimental researchers to keep our models grounded in data, testable at the bench, and actionable at the bedside.
+  image: /assets/img/research/computational-medicine.webp

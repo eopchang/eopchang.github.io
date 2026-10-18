@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+#  NeuroAI Research Group — GitHub Pages (Jekyll) 설정
+#  저장소 이름이 <아이디>.github.io 이면 baseurl은 "" 그대로 두고,
+#  다른 이름(예: nnsm)이면 baseurl: "/nnsm" 으로 바꿔 주세요.
+#  url 에는 사이트 주소(예: https://nnsm-lab.github.io)를 넣으면
+#  카카오톡·슬랙 등에 링크를 붙일 때 미리보기 이미지가 제대로 뜹니다.
+# ─────────────────────────────────────────────────────────────
+title: NeuroAI Research Group
+title_ko: 이론신경과학 & 계산의학 연구실
+description: >-
+  Theoretical Neuroscience & Computational Medicine Laboratory at DGIST.
+  We study the brain and AI within a single space of principles.
+url: "https://eopchang.github.io"
+baseurl: ""
+lang: ko
+timezone: Asia/Seoul
+
+permalink: /blog/:year/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - EDITING.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
+  - .github
+  - .gitignore

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Research
+title_ko: 연구
+page_id: research
+permalink: /research/
+description: NeuroAI approach, cerebellar computation, and computational medicine.
+---
+{% include page-head.html lede="Modeling the brain from the vantage point of AI, and formalizing Korean medicine as a cognitive model." %}
+
+<nav class="wrap jump" aria-label="연구 주제">
+  {% for t in site.data.research %}<a href="#{{ t.id }}">{{ t.title }}</a>{% endfor %}
+</nav>
+
+<div class="wrap research">
+  {% for t in site.data.research %}
+  <article class="research__item" id="{{ t.id }}">
+    <figure class="research__figure">
+      <a href="{{ t.image | relative_url }}" data-lightbox="research-{{ t.id }}" data-caption="{{ t.title }}">
+        <img src="{{ t.image | relative_url }}" alt="{{ t.title }} 연구 개념도" loading="lazy" decoding="async" class="on-dark">
+      </a>
+    </figure>
+    <div class="research__text">
+      <h2 class="research__title">{{ t.title }}</h2>
+      <p class="research__sub">{{ t.subtitle }}</p>
+      {% for p in t.body %}<p>{{ p }}</p>{% endfor %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,157 @@
+- id: pi
+  kind: current
+  title: Principal Investigator
+  title_ko: 책임교수
+  people:
+  - name_ko: 김창업
+    name_en: Chang-Eop Kim
+    degrees: MD(DKM), Ph.D., CPBMI
+    photo: /assets/img/members/chang-eop-kim.webp
+    cv:
+    - 동국대학교 한의학과 (학사)
+    - 서울대학교 의학과 (박사 / 생리학 전공)
+    - 정보의학 인증의 (CPBMI)
+    - Stanford University School of Medicine 방문교수 (2023-2024)
+    - 대한동의생리학회 회장 (2025-현재)
+    - 한국인공지능학회 학술이사 (2025-현재)
+    email: eopchang@dgist.ac.kr
+    affiliation: DGIST 전기전자컴퓨터공학과 (EECS)
+- id: postdoc
+  kind: current
+  title: Postdoctoral Researchers
+  title_ko: 박사후연구원
+  people:
+  - name_ko: 강봉수
+    name_en: Bongsu Kang
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/bongsu-kang.webp
+    bio: 강봉수 연구원은 2022년 상지대학교 한의학과 졸업 후 이론계산 Lab. 에 진학하였습니다. 자연어처리, 한의학 및 계산신경과학 분야의 교차점을 탐구하는 것을 목표로 하며, 언어 및 인지 작용에 대한 이론적 가설 제시 연구에 관심이 있습니다.
+    email: ghkdtocom@gmail.com
+  - name_ko: 김준동
+    name_en: Jundong Kim
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/jundong-kim.webp
+    bio: 김준동 연구원은 2019년 경희대학교 한의학과를 졸업한 후, 안이비인후피부과 전문의 과정을 거쳤으며, 함께 경희대학교 임상한의학과 (안이비인후피부과교실)에서 석사 학위를 받았습니다. 이후 이론계산 lab. 박사과정에 진학하였으며, 의료 인공지능, 계산신경과학 연구에 관심을 두고 연구 중에 있습니다.
+    email: kimjd@gachon.ac.kr
+- id: phd
+  kind: current
+  title: Ph.D. Students
+  title_ko: 박사과정
+  people:
+  - name_ko: 윤태림
+    name_en: Taerim Yun
+    degrees: MD(DKM)
+    photo: /assets/img/members/taerim-yun.webp
+    bio: 윤태림 학생은 2018년 경희대학교 한의학과 졸업 후 이론계산 Lab. 석사 과정에 진학하였습니다. 딥러닝을 활용한 사상의학 연구와 계산신경과학, 의료 인공지능 등에 관심이 있으며 이를 위해 수리통계와 거대언어모델(LLM, Large Language Model) 등을 공부하며 기초 지식을 익히고 있습니다.
+    email: yuntr@tncmlab.com
+    links:
+    - label: Linkedin
+      url: https://www.linkedin.com/in/tae-rim-yun-8028032a3/
+    - label: Facebook
+      url: https://www.facebook.com/yuntaerim
+    - label: Github
+      url: https://github.com/lowlyheart
+- id: ms
+  kind: current
+  title: M.S. Students
+  title_ko: 석사과정
+  people:
+  - name_ko: 조예린
+    name_en: Ye-rin Cho
+    degrees: MD(DKM)
+    photo: /assets/img/members/ye-rin-cho.webp
+    bio: 조예린 학생은 2025년 가천대학교 한의학과 졸업 후 이론계산 Lab. 석사 과정에 진학하였습니다. 의료 인공지능, 계산신경과학 연구에 관심을 두고 기초 지식을 익히고 있습니다.
+    email: qoorin@gachon.ac.kr
+  - name_ko: 조종혁
+    name_en: Jong-Hyeok Cho
+    degrees: MD(DKM)
+    photo: /assets/img/members/jong-hyeok-cho.webp
+    bio: 조종혁 학생은 2025년 경희대학교 한의학과를 졸업한 후, 이론계산 Lab. 석사 과정에 진학하였습니다. 개발 및 구현 경험을 바탕으로, 의료 인공지능, 계산신경과학, 네트워크 약리학 연구에 관심을 두고 연구의 깊이를 더해나가고 있습니다.
+    email: davinci1004@gachon.ac.kr
+    links:
+    - label: Github
+      url: https://github.com/dkfmaekdnjfk
+    - label: Blog
+      url: https://blog.naver.com/jhgolden
+- id: staff
+  kind: current
+  title: Administrative Staff
+  title_ko: 행정
+  people:
+  - name_ko: 박미경
+    name_en: Mikyung Park
+    degrees: ''
+    photo: /assets/img/members/mikyung-park.webp
+- id: alumni-phd
+  kind: alumni
+  title: Alumni, Ph.D.
+  title_ko: 박사 졸업
+  people:
+  - name_ko: 박무순
+    name_en: Musun Park
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/musun-park.webp
+    position:
+    - 한국한의학연구원
+    - 선임연구원
+  - name_ko: 박사윤
+    name_en: Sa-Yoon Park
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/sayoon-park.webp
+    position:
+    - 원광대 한의대 교수
+    email: psy9228@gmail.com
+  - name_ko: 이원융
+    name_en: Won-Yung Lee
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/wonyung-lee.webp
+    position:
+    - 원광대 한의대 교수
+    email: leewyung@gmail.com
+  - name_ko: 배효진
+    name_en: Hyojin Bae
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/hyojin-bae.webp
+    position:
+    - 동국대 한의대 교수
+    email: hyojinbae@dgu.ac.kr
+  - name_ko: 장동엽
+    name_en: Dongyeop Jang
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/dongyeop-jang.webp
+    position:
+    - 동의대 한의대 교수
+    links:
+    - label: Homepage
+      url: https://sites.google.com/view/dongyeop-jang/home
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=kz-AlfAAAAAJ&hl=ko&oi=ao
+    - label: Github
+      url: https://github.com/ggg5438
+    - label: Facebook
+      url: https://www.facebook.com/jang.dongyeop
+- id: alumni-ms
+  kind: alumni
+  title: Alumni, M.S.
+  title_ko: 석사 졸업
+  people:
+  - name_ko: 오지홍
+    name_en: Jihong Oh
+    degrees: MD(DKM), M.S.
+    photo: /assets/img/members/jihong-oh.webp
+    position:
+    - 마포홍익한의원
+    - 연구원장
+- id: former
+  kind: former
+  title: Former Faculty
+  title_ko: 명예·전임 교수
+  people:
+  - name_ko: 이충열
+    name_en: Choong Yeol Lee
+    degrees: MD(DKM), Ph.D.
+    photo: /assets/img/members/choong-yeol-lee.webp
+    cv:
+    - 경희대학교 한의학과 (학사)
+    - 경희대학교 한의학과 (석사 / 생리학 전공)
+    - 경희대학교 한의학과 (박사 / 생리학 전공)

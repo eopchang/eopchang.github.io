@@ -1,0 +1,58 @@
+name: NeuroAI Research Group
+name_full: Theoretical Neuroscience & Computational Medicine Laboratory
+name_ko: 이론신경과학 & 계산의학 연구실
+host: DGIST Electrical Engineering and Computer Science
+host_ko: DGIST 전기전자컴퓨터공학과
+pi: Chang-Eop Kim
+pi_ko: 김창업
+email: eopchang@dgist.ac.kr
+tel: "+82-53-785-6346"
+address_en: E7-L08, DGIST, 333, Techno jungang-daero, Hyeonpung-eup, Dalseong-gun, Daegu, Republic of Korea
+address_ko: 대구광역시 달성군 현풍읍 테크노중앙대로 333 대구경북과학기술원(DGIST) E7(컨실리언스홀) L08호
+lat: 35.706396
+lng: 128.455549
+
+# 홈 화면 문구 (기존 홈페이지 문장 그대로)
+statement_en: We study the brain and AI within a single space of principles.
+statement_ko: 뇌와 AI를 하나의 원리 공간에서 다룹니다.
+principles:
+  - en: Objective
+    ko: 목적함수
+    text: What the brain optimizes
+  - en: Learning rule
+    ko: 학습규칙
+    text: How it updates
+  - en: Architecture
+    ko: 아키텍처
+    text: On what structure it computes
+intro_en:
+  - Insights from this analysis loop back into algorithms that generalize from less data, adapt faster, and behave more robustly.
+  - We extend this approach by treating theories in Korean medicine as cognitive models abstracted from experience, and by formalizing them with machine learning framework.
+intro_ko:
+  - 뇌가 어떤 목적을 최적화하고(목적함수), 어떤 규칙으로 갱신하며(학습규칙), 어떤 구조 위에서 계산하는지(아키텍처)를 규명하고, 이렇게 얻은 통찰을 바탕으로 더 적은 데이터로 일반화하고 더 견고하게 작동할 수 있는 AI 설계 원리를 제안합니다.
+  - 이러한 접근을 확장하여, 한의학 이론을 임상 경험을 통해 형성된 인지적 모델로 해석하고, 머신러닝 프레임워크를 이용하여 수학적으로 정식화합니다.
+
+# 홈 하단 인용구 (블로그 「세상에 대한 '이해'가 어려운 이유」 중)
+epigraph:
+  lines:
+    - 우리가 어려워하는 이유는
+    - 세계가 복잡해서가 아니라
+    - 세계가 인간의 개념 구조에 잘 맞지 않기 때문이 아닌가 하는.
+  source: 세상에 대한 '이해'가 어려운 이유, 2026
+  post: /blog/2026/why-understanding-is-hard/
+
+nav:
+  - title: Research
+    url: /research/
+  - title: Members
+    url: /members/
+  - title: Publications
+    url: /publications/
+  - title: News
+    url: /news/
+  - title: Photos
+    url: /photos/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/

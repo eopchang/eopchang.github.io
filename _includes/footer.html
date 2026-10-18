@@ -1,0 +1,22 @@
+{% assign lab = site.data.lab %}
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__id">
+      <p class="site-foot__name">{{ lab.name }}</p>
+      <p class="site-foot__ko">{{ lab.name_ko }}</p>
+      <p class="site-foot__host">{{ lab.host }}</p>
+    </div>
+    <address class="site-foot__contact">
+      <a href="mailto:{{ lab.email }}">{{ lab.email }}</a>
+      <a href="tel:{{ lab.tel | remove: '-' }}">{{ lab.tel }}</a>
+      <span>{{ lab.address_ko }}</span>
+    </address>
+    <nav class="site-foot__nav" aria-label="하단 메뉴">
+      {% for item in lab.nav %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endfor %}
+    </nav>
+  </div>
+  <div class="wrap site-foot__base">
+    <span>© {{ site.time | date: '%Y' }} {{ lab.name }}</span>
+    <span class="site-foot__coords">{{ lab.lat }}° N, {{ lab.lng }}° E</span>
+  </div>
+</footer>

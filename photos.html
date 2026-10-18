@@ -1,0 +1,44 @@
+---
+layout: default
+title: Photos
+title_ko: 사진
+page_id: photos
+permalink: /photos/
+description: Conferences, camps, graduations and everyday moments of the lab since 2019.
+---
+{% include page-head.html %}
+{% assign years = site.data.photos | group_by: 'year' | sort: 'name' | reverse %}
+{% assign static_paths = site.static_files | map: 'path' %}
+
+<nav class="wrap jump jump--years" aria-label="연도">
+  {% for y in years %}<a href="#y{{ y.name }}">{{ y.name }}</a>{% endfor %}
+</nav>
+
+<div class="wrap albums">
+  {% for y in years %}
+  <section class="year-block year-block--photos" id="y{{ y.name }}">
+    <h2 class="year-block__year">{{ y.name }}</h2>
+    <div class="album-list">
+      {% for a in y.items %}
+      <article class="album" id="album-{{ a.id }}">
+        <header class="album__head">
+          <p class="album__date">{{ a.date }}</p>
+          {% if a.title != '' %}<h3 class="album__title">{{ a.title }}</h3>{% endif %}
+          {% if a.title_en %}<p class="album__en">{{ a.title_en }}</p>{% endif %}
+          {% for n in a.notes %}<p class="album__note">{{ n }}</p>{% endfor %}
+        </header>
+        <div class="album__grid{% if a.photos.size == 1 %} album__grid--one{% endif %}">
+          {% for ph in a.photos %}
+          {% assign thumb = ph | replace: '.webp', '-t.webp' %}
+          {% unless static_paths contains thumb %}{% assign thumb = ph %}{% endunless %}
+          <a class="shot" href="{{ ph | relative_url }}" data-lightbox="album-{{ a.id }}" data-caption="{{ a.date }} {{ a.title | escape }}">
+            <img src="{{ thumb | relative_url }}" alt="{{ a.title | escape }} 사진 {{ forloop.index }}" loading="lazy" decoding="async">
+          </a>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

@@ -1,0 +1,76 @@
+---
+layout: default
+title: Members
+title_ko: 구성원
+page_id: members
+permalink: /members/
+description: Principal investigator, researchers, students and alumni of the NeuroAI Research Group.
+---
+{% include page-head.html %}
+
+{% assign groups = site.data.members %}
+<div class="wrap members">
+  {% for g in groups %}
+  {% if g.kind == 'current' %}
+  <section class="m-group m-group--{{ g.id }}" aria-labelledby="g-{{ g.id }}">
+    <h2 class="m-group__title" id="g-{{ g.id }}">{{ g.title }} <span lang="ko">{{ g.title_ko }}</span></h2>
+    <div class="{% if g.id == 'pi' %}m-pi{% else %}m-grid{% endif %}">
+      {% for p in g.people %}
+      <article class="person{% if g.id == 'pi' %} person--pi{% endif %}">
+        {% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="{{ p.name_ko }} 사진" loading="lazy" decoding="async" width="640" height="800">{% endif %}
+        <div class="person__body">
+          <h3 class="person__name"><span lang="ko">{{ p.name_ko }}</span>{% if p.name_en != '' %} <span class="person__en">{{ p.name_en }}</span>{% endif %}</h3>
+          {% if p.degrees != '' %}<p class="person__deg">{{ p.degrees }}</p>{% endif %}
+          {% if p.affiliation %}<p class="person__aff">{{ p.affiliation }}</p>{% endif %}
+          {% if p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
+          {% if p.cv %}<ul class="person__cv">{% for c in p.cv %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+          {% if p.email or p.links %}
+          <p class="person__links">
+            {% if p.email %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+            {% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}
+          </p>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  {% endfor %}
+
+  <section class="m-group m-group--alumni" aria-labelledby="g-alumni">
+    <h2 class="m-group__title" id="g-alumni">Alumni <span lang="ko">졸업생</span></h2>
+    {% for g in groups %}{% if g.kind == 'alumni' %}
+    <h3 class="m-sub">{{ g.title | remove: 'Alumni, ' }}</h3>
+    <ul class="alumni">
+      {% for p in g.people %}
+      <li class="alum">
+        {% if p.photo %}<img class="alum__photo" src="{{ p.photo | relative_url }}" alt="" loading="lazy" decoding="async">{% endif %}
+        <div>
+          <p class="alum__name"><span lang="ko">{{ p.name_ko }}</span>{% if p.name_en != '' %} <span class="person__en">{{ p.name_en }}</span>{% endif %}</p>
+          <p class="person__deg">{{ p.degrees }}</p>
+          {% if p.position %}<p class="alum__pos">{{ p.position | join: ', ' }}</p>{% endif %}
+          {% if p.email or p.links %}<p class="person__links">{% if p.email %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}{% endfor %}
+  </section>
+
+  {% for g in groups %}{% if g.kind == 'former' %}
+  <section class="m-group m-group--former" aria-labelledby="g-former">
+    <h2 class="m-group__title" id="g-former">{{ g.title }} <span lang="ko">{{ g.title_ko }}</span></h2>
+    {% for p in g.people %}
+    <article class="person person--former">
+      {% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="{{ p.name_ko }} 사진" loading="lazy" decoding="async" width="640" height="800">{% endif %}
+      <div class="person__body">
+        <h3 class="person__name"><span lang="ko">{{ p.name_ko }}</span> <span class="person__en">{{ p.name_en }}</span></h3>
+        <p class="person__deg">{{ p.degrees }}</p>
+        {% if p.cv %}<ul class="person__cv">{% for c in p.cv %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}{% endfor %}
+</div>

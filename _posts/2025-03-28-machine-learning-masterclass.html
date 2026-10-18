@@ -1,0 +1,18 @@
+---
+layout: post
+title: 머신러닝 마스터클래스
+date: 2025-03-28 09:00:00 +0900
+excerpt_text: 이 책 정말 물건이다. 이론과 실무를 겸비한 저자의 깊은 내공과 인사이트, 머신러닝 곳곳에서 선택된 맛깔나는 주제들, ai는 쓰기 힘들 살아숨쉬는 문체까지… 지하철 들고 댕기면서 흥미진진한 소설책 보듯 읽고 있다. 진부한 설명은 하나도 없다.그런데, 5점 만점에 6…
+cover: /assets/img/blog/machine-learning-masterclass/01-t.webp
+---
+<p>이 책 정말 물건이다.</p>
+<p>이론과 실무를 겸비한 저자의 깊은 내공과 인사이트, 머신러닝 곳곳에서 선택된 맛깔나는 주제들, ai는 쓰기 힘들 살아숨쉬는 문체까지…</p>
+<p>지하철 들고 댕기면서 흥미진진한 소설책 보듯 읽고 있다. 진부한 설명은 하나도 없다.<br><br>그런데, 5점 만점에 6점  주고 싶은 흥미진진한 책이지만 소프트맥스와 시그모이드 설명은  ‘굳이 이렇게 사촌도 아니라고 할것 까지야?’ 싶다.</p>
+<p>나도 강의할때 소프트맥스가 시그모이드의 다차원 확장판이라고 설명한다. 그냥 말이 그렇다는게 아니라 실제 수학적으로 그러함을 간단히 확인할 수 있다(사진)</p>
+<p>저자분은 애초에 확률분포를 만들기 위해 도입된 softmax와 달리 sigmoid는 비선형을 만들고 미분가능성을 위해 도입된 것으로 애초에 도입 의도가 다르다고 하는데, 인공신경망의 역사만 놓고 보면 그래보일지 몰라도 원래 sigmoid 함수를 먼저 활용한 통계학의 logistic regression에선 애초에 sigmoid 함수가 실수범위의 아웃풋을 확률로 해석할수 있는 범위로 변환하는데 사용되었다. 그러니까 softmax도 아웃풋을 확률처럼 만들기 위해 고안된 것이고, sigmoid도 (ai 분야가 아닌 오리지날 통계학 분야에선) 아웃풋을 확률처럼 만들기 위해 이용된것. 그리고 둘이 일반화 관계라는 것은 수학적으로도 확인 가능하다.</p>
+<p>참고로 1950년대 세상을 떠들썩하게 한 최초의 인공신경망 perceptron은 비선형함수로 step function을 썼는데 이후 한참 뒤에야(80년대?) 시그모이드 함수로 교체되었고, 알고보니 perceptron with sigmoid function은 이미 통계학계에서 1940년대 발명된 로지스틱 회귀랑 같은 꼴이었다.</p>
+<div class="post-gallery">
+  <a class="post-shot" href="{{ '/assets/img/blog/machine-learning-masterclass/01.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/machine-learning-masterclass/01-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/machine-learning-masterclass/02.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/machine-learning-masterclass/02-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/machine-learning-masterclass/03.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/machine-learning-masterclass/03-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+</div>

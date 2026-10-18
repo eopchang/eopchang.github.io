@@ -1,0 +1,46 @@
+---
+layout: post
+title: 거대추론모델(LRM, Large Reasoning Models)은 인간 뇌의 추론능력 연구를 위한 in silico 모델로 이용될 수 있을까
+date: 2025-12-28 09:00:00 +0900
+excerpt_text: https://www.pnas.org/doi/epdf/10.1073/pnas.2520077122 마우스 모델로 질병을 연구하는 의과학자는 인간과 마우스 사이의 진화적 보존관계에 기반해 인간 생리병리의 근사로서 마우스를 연구한다(마우스의 생로병사 자체가 궁금해서라기보…
+cover: /assets/img/blog/reasoning-models-in-silico/01-t.webp
+---
+<p><a href="https://www.pnas.org/doi/epdf/10.1073/pnas.2520077122">https://www.pnas.org/doi/epdf/10.1073/pnas.2520077122<br><br></a></p>
+<p>마우스 모델로 질병을 연구하는 의과학자는 인간과 마우스 사이의 진화적 보존관계에 기반해 인간 생리병리의 근사로서 마우스를 연구한다(마우스의 생로병사 자체가 궁금해서라기보다는). 윤리적 이슈를 떠나 의미있고 유용한 접근이지만, 마우스의 결과를 인간으로 외삽(extrapolation)할 때 수많은 비약이 일어난다.<br><br></p>
+<p>또 다른 문제가 있다. 인간과 마우스가 공유하는 기능에 대한 연구는 외삽이 어느정도 유효하겠지만, 진화적으로 새로운-인간종에 특이적인 인간고유의 측면들에 대해선 마우스 모델의 결과를 인간에게 외삽하기 어렵거나, 심지어 연구 자체가 아예 불가능하다(고등인지기능이나 언어).<br><br></p>
+<p>이 때문에 수많은 신경과학자들이 시각과 촉각, 정서와 기억에 대한 연구를 엄청나게 발전시켜온 것에 반해, 논리적 추론, 기호와 상징, 언어에 대한 그들의 연구는 상대적으로 빈약하다. 뇌를 모방하고픈 AI 연구자에게는 이 부분이 사실 더 궁금한데 말이다.<br><br></p>
+<p>현대적인 NeuroAI 접근의 시작이라고 할수 있는 2014년 PNAS 논문에서 Daniel Yamins가 CNN으로 인간 시각피질 반응을 예측할수 있음을 보인 이후, 계산신경과학자들이 그동안 집중해오던 모델링 방식-생물리학적 디테일을 구현하는데 집중하는- 대신 목적함수를 최적화하는 방식으로 훈련받은 인공신경망을 다시 들여다봄으로써 인간의 뇌에 대해 배우고자 하는 접근들이 빠르게 확산되었다. 이미 자연이 구현한 진화적 솔루션을 디테일하게 하나하나 구현하기 보다는, 목적함수와 학습규칙 등 큰 틀에서 구조를 잡고, 데이터를 주고, 최적화를 밀어붙임으로써 느슨한 근사모델이 진화적 솔루션과 비슷한 방향으로 수렴적 진화하기를 기대하는 것이다. 그리고 다시 그 세부를 분석함으로써 인간의 뇌를 이해한다.<br><br></p>
+<p>그결과 이제 딥러닝과 같은 인공신경망이 인간 뇌를 이해할수 있는 in silico 모델이 된다.</p>
+<p>인간과학자가 훈련시켰지만, 그 작동원리는 과학자도 공학자도 정확히 모르기때문에, 마우스 뇌를 하나하나 파헤치듯 이 인공신경망을 해부하고, 조작하면서 연구를 수행한다. 동물모델에 비해 실험하기가 엄청나게 쉬울 뿐 아니라, 높은 해상도와 정확도의 데이터를 아주 싼값으로 얻을 수 있다. 윤리적 이슈도 없다.<br><br></p>
+<p>무엇보다도 중요한건, 마우스에서 할 수 없었던 언어와 논리, 추론과 추상, 기호와 상징에 대한 뇌과학을 연구할 수 있게 된다.<br><br></p>
+<p>지난 십여년간 NeuroAI 접근이 주로 시각 분야에서 가장 활발하게 이뤄졌고, LLM 등장 이후 언어를 포함한 보다 고차적 측면들에 대한 접근이 이뤄지기 시작했는데,</p>
+<p>소개하는 이번 PNAS 논문은 드디어 기호와 상징을 다루는 추상적 능력, 추론 능력 연구에 있어서의 인공신경망 모델의 가능성을 제시했다.<br><br></p>
+<p>추론 모델인 DeepSeek R1의 추론 방식이 인간과 비슷함을 보였고(사실 결과라는게...과제당 인간의 추론시간의 근사로 추론모델 토큰소비량을 잡아 비교한 것이라 다소 싱겁긴 함), 이는 명시적 기호주의 모델 없이도, 신경망이 강화학습과정에서 인간과 비슷한 추론방식을 창발적으로 구현해낸 것이라 볼수 있겠다.<br><br></p>
+<p>우리는 분명 기호를 사고한다(특정 과제에 한해서). 그래서 프로그래밍도 기호조작으로 한다(변수 생성하고 할당하지, 가중치를 나열하는 식으로 코딩하지 않는다). 하지만 뇌 속에 이 기호적 사고, 논리적 추론이 분산된 병렬처리의 신경망 구조로 implementation되어있음을 안다.<br><br></p>
+<p>연결주의자들은 우리가 만들 AI에서도 인간처럼 분산된 연결망의 학습을 밀어붙여서 이로부터 기호적 사고가 창발하도록 해야 한다고 주장한다.<br><br></p>
+<p>반면 전통적인 기호주의자들, 혹은 이제는 신경망을 받아들인 현대의 기호주의 옹호자들은 시스템1 사고는 기존의 딥러닝을 활용하되, 시스템 2 사고를 위해선 명시적 기호조작을 수행하는 전통적 기호주의적 접근이 부활해 하이브리드로 가야 한다고 주장한다(뉴로심볼릭 AI).<br><br></p>
+<p>의료분야의 응용AI를 개발하기도 하는 내 입장에선, 당장엔 이런 하이브리드 접근이 매우 유용하고 상당히 강력할것이라 생각한다.<br><br></p>
+<p>하지만 동시에 NeuroAI 접근을 활용해 신경과학의 계산적 기전을 이해하고자 하는 기초신경과학자의 입장에선, 결국 어떻게 분산된 신경망의 벡터화 행렬연산 속에 우리가 의식적으로 조작하는 기호적 사고가 떠오르는지(emerge)가 너무나 궁금하고, 이 논문에서 제시하는 가능성처럼 토큰으로 사고하는 언어추론모델이 이에 대한 in silico model이 될 수 있다는 사실에 무척 흥분된다.<br><br></p>
+<p>소소하지만 흥미로운 포인트로,</p>
+<p>논문의 저자들은 DeepSeek R1 모델의 추론이 내적 독백(=CoT)으로 나타나는 언어적 수준에만 있는게 아니라 그 내부 연산에 표현되고 있을 가능성을 제시하는데, 이는 앤트로픽에서 클로드가 내적 독백대로만 실제 추론하는게 아니며, 심지어 내적독백 형태의 추론과정이 투명하게 들어나고 있음을 알게 될 경우 진짜 내부적 사고를 숨기고 CoT 과정을 거짓으로 꾸미기까지 함을 보고했던 바와 통한다.(그래서 추론 모델들은 자신들의 사고가 사용자에게 읽힐 수 있음을 모름)</p>
+<div class="post-gallery">
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/01.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/01-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/02.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/02-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/03.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/03-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/04.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/04-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/05.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/05-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/06.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/06-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/07.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/07-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/08.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/08-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/09.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/09-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/10.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/10-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/11.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/11-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/12.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/12-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/13.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/13-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/14.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/14-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/15.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/15-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/16.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/16-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/17.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/17-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/18.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/18-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+  <a class="post-shot" href="{{ '/assets/img/blog/reasoning-models-in-silico/19.webp' | relative_url }}" data-lightbox="post"><img src="{{ '/assets/img/blog/reasoning-models-in-silico/19-t.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></a>
+</div>

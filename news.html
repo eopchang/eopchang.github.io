@@ -1,0 +1,35 @@
+---
+layout: default
+title: News
+title_ko: 소식
+page_id: news
+permalink: /news/
+description: Press coverage, awards and interviews of the NeuroAI Research Group.
+---
+{% include page-head.html %}
+
+<div class="wrap">
+  <ol class="news">
+    {% for n in site.data.news %}
+    <li class="news-item">
+      {% if n.images.size > 0 %}
+      <div class="news-item__media">
+        {% for img in n.images %}
+        <a href="{{ img | relative_url }}" data-lightbox="news-{{ forloop.parentloop.index }}" data-caption="{{ n.title | escape }}"{% unless forloop.first %} hidden{% endunless %}>
+          <img src="{{ img | relative_url }}" alt="" loading="lazy" decoding="async">
+        </a>
+        {% endfor %}
+        {% if n.images.size > 1 %}<span class="news-item__more">사진 {{ n.images.size }}장</span>{% endif %}
+      </div>
+      {% endif %}
+      <div class="news-item__text">
+        {% if n.source != '' %}<p class="news-item__src">{{ n.source }}</p>{% endif %}
+        <h2 class="news-item__title">{% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a>{% else %}{{ n.title }}{% endif %}</h2>
+        {% if n.points.size > 0 %}
+        <ul class="news-item__points">{% for pt in n.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</div>

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Contact
+title_ko: 연락처
+page_id: contact
+permalink: /contact/
+description: Contact the NeuroAI Research Group at DGIST.
+---
+{% assign lab = site.data.lab %}
+{% include page-head.html %}
+
+<div class="wrap contact">
+  <div class="contact__info">
+    <p class="contact__lab">{{ lab.name_full }}<br><span>{{ lab.host }}</span></p>
+    <dl class="contact__list">
+      <div><dt>P.I.</dt><dd>{{ lab.pi }} <span lang="ko">{{ lab.pi_ko }}</span></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:{{ lab.email }}">{{ lab.email }}</a></dd></div>
+      <div><dt>Tel</dt><dd><a href="tel:{{ lab.tel | remove: '-' }}">{{ lab.tel }}</a></dd></div>
+      <div><dt>Address</dt><dd>{{ lab.address_en }}<br><span lang="ko">{{ lab.address_ko }}</span></dd></div>
+    </dl>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query={{ lab.lat }},{{ lab.lng }}" target="_blank" rel="noopener">Google 지도에서 열기</a>
+  </div>
+  <div class="contact__map">
+    <iframe title="DGIST E7 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?hl=ko&amp;q={{ lab.lat }},{{ lab.lng }}&amp;z=16&amp;output=embed"></iframe>
+  </div>
+</div>
