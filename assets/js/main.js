@@ -155,39 +155,27 @@
     });
   }
 
-  /* ---------------- publications: search + featured filter ---------------- */
+  /* ---------------- publications: search ---------------- */
   var pubs = document.querySelector("[data-pubs]");
   if (pubs) {
     var q = pubs.querySelector("[data-pubs-q]");
-    var btns = pubs.querySelectorAll("[data-pubs-filter]");
-    var countEl = pubs.querySelector("[data-pubs-count]");
     var empty = pubs.querySelector("[data-pubs-empty]");
     var blocks = pubs.querySelectorAll("[data-year-block]");
-    var mode = "all";
     var items = Array.prototype.map.call(pubs.querySelectorAll(".pub"), function (li) {
-      return { el: li, text: li.textContent.toLowerCase(), featured: li.getAttribute("data-featured") === "1" };
+      return { el: li, text: li.textContent.toLowerCase() };
     });
-    function apply() {
+    q.addEventListener("input", function () {
       var terms = (q.value || "").toLowerCase().trim().split(/\s+/).filter(Boolean);
       var n = 0;
       items.forEach(function (it) {
-        var ok = (mode === "all" || it.featured) && terms.every(function (t) { return it.text.indexOf(t) !== -1; });
+        var ok = terms.every(function (t) { return it.text.indexOf(t) !== -1; });
         it.el.hidden = !ok;
         if (ok) n++;
       });
       Array.prototype.forEach.call(blocks, function (b) {
         b.hidden = !b.querySelector(".pub:not([hidden])");
       });
-      countEl.textContent = n;
       empty.hidden = n !== 0;
-    }
-    q.addEventListener("input", apply);
-    Array.prototype.forEach.call(btns, function (b) {
-      b.addEventListener("click", function () {
-        mode = b.getAttribute("data-pubs-filter");
-        Array.prototype.forEach.call(btns, function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
-        apply();
-      });
     });
   }
 })();

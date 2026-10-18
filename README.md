@@ -51,7 +51,8 @@ YAML은 **들여쓰기(스페이스 2칸)** 가 중요합니다. 제목에 `:` �
 | 연구실 이름, 대문 질문·블랙홀 설명, 소개 문구, 연락처, 홈 화면 인용문 | `_data/lab.yml` |
 | 연구 주제 3개 | `_data/research.yml` |
 | 구성원 | `_data/members.yml` |
-| 논문 | `_data/publications.yml` |
+| 논문 (전체 목록) | `_data/publications.yml` |
+| 홈 화면 Selected papers | `_data/selected_publications.yml` |
 | 뉴스 | `_data/news.yml` |
 | 사진 앨범 | `_data/photos.yml` |
 | 블로그 글 | `_posts/` |
@@ -66,10 +67,18 @@ YAML은 **들여쓰기(스페이스 2칸)** 가 중요합니다. 제목에 `:` �
   - title: 'Paper title: subtitle'
     url: https://doi.org/10.xxxx/xxxxx
     info: Journal Name. 2026 Oct. Author A, Author B, Chang-Eop Kim*.
-    featured: true        # '주요 논문'과 홈 화면에 표시하려면 (선택)
 ```
 
 책임교수 이름(Chang-Eop Kim, CE Kim, 김창업 등)은 자동으로 굵게 표시됩니다.
+
+홈 화면의 Selected papers는 `_data/selected_publications.yml`에 따로 있습니다. 적힌 순서대로 보이고, 논문 페이지에는 영향을 주지 않습니다.
+
+```yaml
+- title: 논문 제목
+  venue: Nature Communications
+  year: 2025
+  url: https://doi.org/...
+```
 
 ### 뉴스 추가
 

@@ -75,7 +75,7 @@ gargantua: true
   <div class="lately__col">
     <h2 class="section-title">News</h2>
     <ol class="mini-news">
-      {% for n in site.data.news limit: 4 %}
+      {% for n in site.data.news limit: 6 %}
       <li>
         {% if n.source != '' %}<span class="mini-news__src">{{ n.source }}</span>{% endif %}
         {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a>{% else %}<span>{{ n.title }}</span>{% endif %}
@@ -87,13 +87,12 @@ gargantua: true
   <div class="lately__col">
     <h2 class="section-title">Selected papers</h2>
     <ol class="mini-pubs">
-      {% assign n_feat = 0 %}
-      {% for y in site.data.publications %}{% for p in y.items %}{% if p.featured and n_feat < 5 %}{% assign n_feat = n_feat | plus: 1 %}
+      {% for p in site.data.selected_publications %}
       <li>
         <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>
-        <span class="mini-pubs__venue">{{ p.info | split: '.' | first }}, {{ y.year }}</span>
+        <span class="mini-pubs__venue">{{ p.venue }}, {{ p.year }}</span>
       </li>
-      {% endif %}{% endfor %}{% endfor %}
+      {% endfor %}
     </ol>
     <a class="more" href="{{ '/publications/' | relative_url }}">전체 논문 보기</a>
   </div>

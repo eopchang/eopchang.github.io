@@ -1,0 +1,37 @@
+# 홈 화면 'Selected papers' 목록 (CV의 Selected Publications 기준, 위에서부터 순서대로 표시)
+- title: A normative principle governing memory transfer in cerebellar motor learning
+  venue: Nature Communications
+  year: 2025
+  url: https://www.nature.com/articles/s41467-025-60511-z
+- title: Evaluating current status of network pharmacology for herbal medicine focusing on identifying mechanisms and therapeutic effects
+  venue: Journal of Advanced Research
+  year: 2025
+  url: https://www.sciencedirect.com/science/article/pii/S2090123224006180
+- title: 'Identifying features that shape perceived consciousness in LLM-based AI: A quantitative study of human responses'
+  venue: Computers in Human Behavior Reports
+  year: 2025
+  url: https://doi.org/10.1016/j.chbr.2025.100901
+- title: 'Individualized Diagnosis and Prescription in Traditional Medicine: Decision-Making Process Analysis and Machine Learning-Based Analysis Tool Development'
+  venue: The American Journal of Chinese Medicine
+  year: 2022
+  url: https://doi.org/10.1142/S0192415X2250077X
+- title: Persistent Activity of Metabotropic Glutamate Receptor 5 in the Periaqueductal Gray Constrains Emergence of Chronic Neuropathic Pain
+  venue: Current Biology
+  year: 2020
+  url: https://doi.org/10.1016/j.cub.2020.09.008
+- title: Direct translation of climbing fiber burst-mediated sensory coding into post-synaptic Purkinje cell dendritic calcium
+  venue: eLife
+  year: 2020
+  url: https://doi.org/10.7554/eLife.61593
+- title: 'Systems-level mechanisms of action of Panax ginseng: A network pharmacological approach'
+  venue: Journal of Ginseng Research
+  year: 2018
+  url: https://www.sciencedirect.com/science/article/pii/S1226845317302634
+- title: Large-scale plastic changes of the brain network in an animal model of neuropathic pain
+  venue: NeuroImage
+  year: 2014
+  url: https://www.sciencedirect.com/science/article/pii/S1053811914003437
+- title: 'Identifying neuropathic pain using 18F-FDG micro-PET: A multivariate pattern analysis'
+  venue: NeuroImage
+  year: 2014
+  url: https://www.sciencedirect.com/science/article/pii/S1053811913010100

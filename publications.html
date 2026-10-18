@@ -6,7 +6,6 @@ page_id: publications
 permalink: /publications/
 description: Peer-reviewed papers and preprints from the NeuroAI Research Group, 2013 to present.
 ---
-{% assign total = 0 %}{% for y in site.data.publications %}{% assign total = total | plus: y.items.size %}{% endfor %}
 {% include page-head.html %}
 
 <div class="wrap pubs" data-pubs>
@@ -16,11 +15,6 @@ description: Peer-reviewed papers and preprints from the NeuroAI Research Group,
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
       <input type="search" placeholder="제목, 저자, 학술지로 검색" autocomplete="off" data-pubs-q>
     </label>
-    <div class="seg" role="group" aria-label="보기">
-      <button type="button" class="seg__btn" aria-pressed="true" data-pubs-filter="all">전체</button>
-      <button type="button" class="seg__btn" aria-pressed="false" data-pubs-filter="featured">주요 논문</button>
-    </div>
-    <p class="pubs__count" aria-live="polite"><span data-pubs-count>{{ total }}</span>편</p>
   </div>
 
   {% for y in site.data.publications %}
@@ -29,7 +23,7 @@ description: Peer-reviewed papers and preprints from the NeuroAI Research Group,
     <ol class="pub-list">
       {% for p in y.items %}
       {% capture info %}{{ p.info | escape | replace: 'Chang-Eop Kim', '<b>Chang-Eop Kim</b>' | replace: 'CE Kim', '<b>CE Kim</b>' | replace: 'Kim CE', '<b>Kim CE</b>' | replace: 'Kim Chang-eop', '<b>Kim Chang-eop</b>' | replace: 'K Chang-Eop', '<b>K Chang-Eop</b>' | replace: 'Kim, Chang-Eop', '<b>Kim, Chang-Eop</b>' | replace: 'Kim C ', '<b>Kim C</b> ' | replace: '김창업', '<b>김창업</b>' }}{% endcapture %}
-      <li class="pub{% if p.featured %} pub--featured{% endif %}" data-featured="{% if p.featured %}1{% else %}0{% endif %}">
+      <li class="pub">
         <p class="pub__title">{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
         <p class="pub__info">{{ info }}</p>
         {% if p.tags %}<p class="pub__tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>{% endif %}
