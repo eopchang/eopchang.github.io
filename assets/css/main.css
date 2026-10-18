@@ -463,7 +463,16 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
 .person__links a { color: var(--horizon); text-decoration: none; }
 .person__links a:hover { color: var(--corona); }
 
-.m-pi .person--pi { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: end; }
+.m-pi .person--pi { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.person--pi .person__photo { position: sticky; top: calc(var(--head-h) + 32px); }
+.person--pi .person__aff { margin-top: 10px; font-size: 16px; color: var(--starlight); }
+.person__joint { margin: 3px 0 0; font-size: 14.5px; color: var(--dust); }
+.person__cv-title {
+  margin: 32px 0 0; font-family: var(--serif-ko); font-weight: 400;
+  font-size: 16px; letter-spacing: .06em; color: var(--accretion);
+}
+.person__cv li { word-break: keep-all; }
+.person__cv-title + .person__cv { margin-top: 10px; }
 .person--pi .person__photo { box-shadow: 0 0 0 1px var(--hair), 0 30px 80px -30px rgba(231, 181, 115, .35); }
 .person--pi .person__name { margin: 0; font-size: clamp(34px, 4vw, 48px); line-height: 1.15; }
 .person--pi .person__en { display: block; font-size: clamp(26px, 3vw, 36px); margin-top: 4px; }
@@ -485,6 +494,7 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
 .person--former { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: end; max-width: 760px; }
 @media (max-width: 760px) {
   .m-pi .person--pi { grid-template-columns: 1fr; }
+  .person--pi .person__photo { position: static; }
   .person--former { grid-template-columns: 140px 1fr; gap: 20px; }
   .m-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 18px; }
   .alumni { grid-template-columns: 1fr; }

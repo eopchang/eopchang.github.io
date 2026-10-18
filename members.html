@@ -22,8 +22,13 @@ description: Principal investigator, researchers, students and alumni of the Neu
           <h3 class="person__name"><span lang="ko">{{ p.name_ko }}</span>{% if p.name_en != '' %} <span class="person__en">{{ p.name_en }}</span>{% endif %}</h3>
           {% if p.degrees != '' %}<p class="person__deg">{{ p.degrees }}</p>{% endif %}
           {% if p.affiliation %}<p class="person__aff">{{ p.affiliation }}</p>{% endif %}
+          {% for j in p.joint %}<p class="person__joint">{{ j }}</p>{% endfor %}
           {% if p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
           {% if p.cv %}<ul class="person__cv">{% for c in p.cv %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+          {% for cg in p.cv_groups %}
+          <h4 class="person__cv-title">{{ cg.title }}</h4>
+          <ul class="person__cv">{% for c in cg.items %}<li>{{ c | replace: '-', '‑' }}</li>{% endfor %}</ul>
+          {% endfor %}
           {% if p.email or p.links %}
           <p class="person__links">
             {% if p.email %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}

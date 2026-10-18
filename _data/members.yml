@@ -7,19 +7,29 @@
     name_en: Chang-Eop Kim
     degrees: MD(DKM), Ph.D., CPBMI
     photo: /assets/img/members/chang-eop-kim.webp
-    cv:
-    - DGIST 학제학과 의생명공학전공 겸무교수
-    - DGIST AI대학 AI-X학과 NeuroAI 트랙 겸무교수
-    - 가천대학교 한의과대학 생리학교실 조교수·부교수 (2016-2026)
-    - Stanford University School of Medicine 방문교수 (2023-2024)
-    - 동국대학교 한의학과 (학사)
-    - 서울대학교 의학과 (박사 / 생리학 전공)
-    - 수학 학사 (학점은행제)
-    - 정보의학 인증의 (CPBMI)
-    - 대한동의생리학회 회장 (2025-현재)
-    - 한국인공지능학회 학술이사 (2025-현재)
-    email: eopchang@dgist.ac.kr
     affiliation: DGIST 전기전자컴퓨터공학과 부교수
+    joint:
+    - DGIST 학제학과 의생명공학전공 겸임교수
+    - DGIST AI대학 AI-X학과 NeuroAI 트랙 겸임교수
+    cv_groups:
+    - title: 학력
+      items:
+      - 서울대학교 의학과 박사 (생리학 전공)
+      - 동국대학교 한의학과 학사
+      - 수학 학사 (학점은행제)
+      - 정보의학 인증의 (CPBMI)
+    - title: 경력
+      items:
+      - 가천대학교 한의과대학 생리학교실 조교수·부교수 (2016-2026)
+      - Stanford University School of Medicine 방문교수 (2023-2024)
+      - 서울대학교 의과대학 생리학교실 박사후연구원 (2014-2015)
+    - title: 편집·학회 활동
+      items:
+      - Experimental Neurobiology 섹션 에디터 (NeuroAI and Data Science)
+      - BMC Complementary Medicine and Therapies 부편집인 (2021-현재)
+      - 대한동의생리학회 회장 (2025-현재)
+      - 한국인공지능학회 학술이사 (2025-현재)
+    email: eopchang@dgist.ac.kr
 - id: postdoc
   kind: current
   title: Postdoctoral Researchers
