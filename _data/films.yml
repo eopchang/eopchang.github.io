@@ -1,0 +1,11 @@
+# 홈 화면 Films 섹션 (연구실 소개 영상)
+- title: NeuroAI
+  line: 뇌와 AI를, 하나의 원리 공간에서.
+  src: /assets/video/neuroai.mp4
+  poster: /assets/video/neuroai.jpg
+  duration: "1:30"
+- title: Korean Medicine
+  line: 한의사의 암묵지를, 설명 가능한 모델로.
+  src: /assets/video/korean-medicine.mp4
+  poster: /assets/video/korean-medicine.jpg
+  duration: "1:30"

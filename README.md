@@ -53,6 +53,7 @@ YAML은 **들여쓰기(스페이스 2칸)** 가 중요합니다. 제목에 `:` �
 | 구성원 | `_data/members.yml` |
 | 논문 (전체 목록) | `_data/publications.yml` |
 | 홈 화면 Selected papers | `_data/selected_publications.yml` |
+| 홈 화면 Films (소개 영상) | `_data/films.yml`, 영상·멈춤 화면은 `assets/video/` |
 | 뉴스 | `_data/news.yml` |
 | 사진 앨범 | `_data/photos.yml` |
 | 블로그 글 | `_posts/` |

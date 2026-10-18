@@ -61,6 +61,25 @@ gargantua: true
   </div>
 </section>
 
+<section class="films wrap" aria-labelledby="films-title">
+  <h2 class="section-title" id="films-title">Films</h2>
+  <div class="films__grid">
+    {% for f in site.data.films %}
+    <figure class="film">
+      <button class="film__poster" type="button" data-film="{{ f.src | relative_url }}" aria-label="{{ f.title }} 영상 재생, {{ f.duration }}">
+        <img src="{{ f.poster | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="720">
+        <span class="film__play" aria-hidden="true"></span>
+        <span class="film__time">{{ f.duration }}</span>
+      </button>
+      <figcaption>
+        <h3 class="film__title">{{ f.title }}</h3>
+        <p class="film__line">{{ f.line }}</p>
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="themes wrap" aria-labelledby="themes-title">
   <h2 class="section-title" id="themes-title">Research</h2>
   {% for t in site.data.research %}

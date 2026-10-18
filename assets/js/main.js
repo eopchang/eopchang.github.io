@@ -155,6 +155,20 @@
     });
   }
 
+  /* ---------------- films: swap the poster for the player on click ---------------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-film]"), function (btn) {
+    btn.addEventListener("click", function () {
+      var v = document.createElement("video");
+      v.src = btn.getAttribute("data-film");
+      v.poster = btn.querySelector("img").getAttribute("src");
+      v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = "auto";
+      v.setAttribute("aria-label", btn.getAttribute("aria-label"));
+      btn.replaceWith(v);
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+      v.focus();
+    });
+  });
+
   /* ---------------- publications: search ---------------- */
   var pubs = document.querySelector("[data-pubs]");
   if (pubs) {

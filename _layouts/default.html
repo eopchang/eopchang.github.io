@@ -11,7 +11,10 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ doc_title | strip_html }}">
   <meta property="og:description" content="{{ desc | strip_html | strip_newlines | truncate: 180 }}">
-  <meta property="og:image" content="{{ page.cover | default: '/assets/img/og-gargantua.jpg' | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="{{ page.cover | default: '/assets/img/og-lab.jpg' | absolute_url }}">
+  {% unless page.cover %}<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">{% endunless %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
