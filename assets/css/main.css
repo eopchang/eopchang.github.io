@@ -130,7 +130,6 @@ main { position: relative; z-index: 1; display: block; min-height: 70vh; }
   text-decoration: none; color: var(--starlight);
 }
 .wordmark:hover { color: var(--corona); }
-.wordmark__glyph { width: 30px; height: 30px; color: var(--accretion); flex: none; }
 .wordmark__text {
   font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: .01em; line-height: 1;
 }
