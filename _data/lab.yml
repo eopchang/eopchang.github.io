@@ -3,6 +3,13 @@ name_full: Theoretical Neuroscience & Computational Medicine Laboratory
 name_ko: 이론신경과학 & 계산의학 연구실
 host: DGIST Electrical Engineering and Computer Science
 host_ko: DGIST 전기전자컴퓨터공학과
+
+# 대문(홈 첫 화면)
+hero_question: What are the principles of intelligence?
+hero_note: >-
+  이 블랙홀은 휘어진 시공간을 지나는 빛의 경로를 방정식 하나로부터 계산해 낸 결과입니다.
+  복잡한 현상 이면의 단순한 원리를 이해하고, 그 원리로부터 현상을 계산해 내는 것.
+  뇌와 AI를 이해하려는 우리의 전략도 그와 같습니다.
 pi: Chang-Eop Kim
 pi_ko: 김창업
 email: eopchang@dgist.ac.kr

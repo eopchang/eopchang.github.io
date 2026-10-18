@@ -12,13 +12,18 @@ gargantua: true
     </picture>
     <canvas class="hero__canvas" data-gargantua aria-hidden="true"></canvas>
   </div>
-  <div class="hero__text wrap">
-    <h1 class="hero__title">NeuroAI<br>Research Group</h1>
-    <p class="hero__ko">{{ lab.name_ko }}</p>
-    <p class="hero__host">{{ lab.name_full }}<br>{{ lab.host }}</p>
+  <div class="hero__body wrap">
+    <div class="hero__text">
+      <p class="hero__q" lang="en">{{ lab.hero_question }}</p>
+      <h1 class="hero__title">Theoretical Neuroscience <br>&amp; Computational Medicine <br>Laboratory</h1>
+      <p class="hero__group">{{ lab.name }}</p>
+      <p class="hero__host">{{ lab.name_ko }}<br><span lang="en">{{ lab.host }}</span></p>
+    </div>
+    <p class="hero__note">{{ lab.hero_note }}</p>
   </div>
   <a class="hero__cue" href="#statement" aria-label="아래로 스크롤"><span></span></a>
 </section>
+<div class="hero-note-below wrap"><p class="hero__note">{{ lab.hero_note }}</p></div>
 
 <section class="statement wrap" id="statement">
   <p class="statement__en">{{ lab.statement_en }}</p>
