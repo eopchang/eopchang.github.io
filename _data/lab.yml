@@ -7,17 +7,10 @@ host_ko: DGIST 전기전자컴퓨터공학과
 # 대문(홈 첫 화면)
 hero_question: What are the principles of intelligence?
 hero_note: >-
-  이 블랙홀은 휘어진 시공간을 지나는 빛의 경로를 방정식 하나로부터 계산해 낸 결과입니다.
-  복잡한 현상 이면의 단순한 원리를 이해하고, 그 원리로부터 현상을 계산해 내는 것.
-  뇌와 AI를 이해하려는 우리의 전략도 그와 같습니다.
-pi: Chang-Eop Kim
-pi_ko: 김창업
-email: eopchang@dgist.ac.kr
-tel: "+82-53-785-6346"
-address_en: E7-L08, DGIST, 333, Techno jungang-daero, Hyeonpung-eup, Dalseong-gun, Daegu, Republic of Korea
-address_ko: 대구광역시 달성군 현풍읍 테크노중앙대로 333 대구경북과학기술원(DGIST) E7(컨실리언스홀) L08호
-lat: 35.706396
-lng: 128.455549
+  블랙홀은 보이지 않습니다. 우리가 보는 것은 그 곁에서 휘어진 빛입니다.
+  이 장면은 그 빛의 경로를 일반상대성이론으로 계산해 그려낸 것입니다.
+  보이는 흔적에서 보이지 않는 원리로, 그리고 그 원리에서 다시 현상으로.
+  뇌와 AI를 이해하려는 우리의 방식입니다.
 
 # 홈 화면 문구 (기존 홈페이지 문장 그대로)
 statement_en: We study the brain and AI within a single space of principles.
