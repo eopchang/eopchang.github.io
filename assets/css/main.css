@@ -205,10 +205,6 @@ main { position: relative; z-index: 1; display: block; min-height: 70vh; }
   font-family: var(--serif); font-weight: 300; margin: 0;
   font-size: clamp(56px, 9vw, 112px); line-height: .95; letter-spacing: -0.02em;
 }
-.page-head__ko {
-  font-family: var(--serif-ko); font-weight: 300; font-size: clamp(18px, 2vw, 22px);
-  color: var(--dust); margin: 18px 0 0; letter-spacing: .02em;
-}
 .page-head__lede {
   max-width: 34rem; margin: 28px 0 0; color: var(--dust);
   font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.45;

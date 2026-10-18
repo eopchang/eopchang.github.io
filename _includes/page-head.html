@@ -1,5 +1,4 @@
 <header class="page-head wrap">
   <h1 class="page-head__title">{{ include.title | default: page.title }}</h1>
-  {% if include.ko or page.title_ko %}<p class="page-head__ko">{{ include.ko | default: page.title_ko }}</p>{% endif %}
   {% if include.lede or page.lede %}<p class="page-head__lede">{{ include.lede | default: page.lede }}</p>{% endif %}
 </header>
