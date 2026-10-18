@@ -83,7 +83,6 @@ gargantua: true
     <ol class="mini-news">
       {% for n in site.data.news limit: 6 %}
       <li>
-        {% if n.source != '' %}<span class="mini-news__src">{{ n.source }}</span>{% endif %}
         {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a>{% else %}<span>{{ n.title }}</span>{% endif %}
       </li>
       {% endfor %}
