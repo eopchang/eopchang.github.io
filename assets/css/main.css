@@ -346,6 +346,13 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
 .principle__name { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; margin: 24px 0 0; }
 .principle__name span { display: block; font-family: var(--serif-ko); font-size: 15px; color: var(--dust); margin-top: 8px; font-weight: 400; letter-spacing: .04em; }
 .principle__text { color: var(--dust); margin: 14px 0 0; font-size: 16px; }
+/* the three principles converge on what they give rise to */
+.emerges { text-align: center; }
+.emerges__lines { display: block; width: 100%; height: 72px; margin-top: 4px; }
+.emerges__lines path { fill: none; stroke: var(--accretion); stroke-width: 1; opacity: .35; vector-effect: non-scaling-stroke; }
+.representation { padding: 18px 0 0; }
+.representation .principle__glyph { margin: 0 auto; display: block; width: 150px; height: 80px; }
+.representation .principle__name { margin-top: 18px; }
 .statement__body {
   margin-top: clamp(56px, 7vw, 88px);
   display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px);
@@ -357,6 +364,10 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
 @media (max-width: 760px) {
   .principles { grid-template-columns: 1fr; }
   .principle, .principle + .principle { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--hair-cool); }
+  .emerges { text-align: left; }
+  .emerges__lines { display: none; }
+  .representation { padding: 28px 0; border-bottom: 1px solid var(--hair-cool); }
+  .representation .principle__glyph { margin: 0; width: 120px; height: 64px; }
   .statement__body { grid-template-columns: 1fr; }
 }
 

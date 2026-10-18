@@ -25,11 +25,16 @@ principles:
   - en: Architecture
     ko: 아키텍처
     text: On what structure it computes
+# 세 원리가 만들어 내는 것. 원리 아래에 따로 표시됨
+representation:
+  en: Representation
+  ko: 표현
+  text: What emerges, and what we can measure
 intro_en:
-  - Insights from this analysis loop back into algorithms that generalize from less data, adapt faster, and behave more robustly.
+  - We ask what the brain optimizes (objective), how it updates (learning rule), and on what structure it computes (architecture), and we test these principles against the representations they give rise to in biological and artificial networks. Insights from this analysis loop back into algorithms that generalize from less data, adapt faster, and behave more robustly.
   - We extend this approach by treating theories in Korean medicine as cognitive models abstracted from experience, and by formalizing them with machine learning framework.
 intro_ko:
-  - 뇌가 어떤 목적을 최적화하고(목적함수), 어떤 규칙으로 갱신하며(학습규칙), 어떤 구조 위에서 계산하는지(아키텍처)를 규명하고, 이렇게 얻은 통찰을 바탕으로 더 적은 데이터로 일반화하고 더 견고하게 작동할 수 있는 AI 설계 원리를 제안합니다.
+  - 뇌가 어떤 목적을 최적화하고(목적함수), 어떤 규칙으로 갱신하며(학습규칙), 어떤 구조 위에서 계산하는지(아키텍처)를 규명합니다. 그 결과로 형성되는 표현을 생물학적·인공 신경망에서 함께 측정하고 비교하여 원리를 검증합니다. 이렇게 얻은 통찰을 바탕으로 더 적은 데이터로 일반화하고 더 견고하게 작동하는 AI 설계 원리를 제안합니다.
   - 이러한 접근을 확장하여, 한의학 이론을 임상 경험을 통해 형성된 인지적 모델로 해석하고, 머신러닝 프레임워크를 이용하여 수학적으로 정식화합니다.
 
 # 홈 하단 인용구 (블로그 「세상에 대한 '이해'가 어려운 이유」 중)
