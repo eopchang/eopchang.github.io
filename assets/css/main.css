@@ -341,17 +341,18 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
 }
 .principle { padding: 36px 32px 8px 0; }
 .principle + .principle { padding-left: 32px; border-left: 1px solid var(--hair-cool); }
-.principle__glyph { width: 120px; height: 64px; stroke: var(--accretion); stroke-width: 1; fill: none; overflow: visible; }
+.principle__glyph { width: 144px; height: 77px; stroke: var(--accretion); stroke-width: 1; fill: none; overflow: visible; }
 .principle__glyph .fill { fill: var(--corona); stroke: none; filter: drop-shadow(0 0 6px rgba(255, 233, 196, .9)); }
 .principle__name { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; margin: 24px 0 0; }
 .principle__name span { display: block; font-family: var(--serif-ko); font-size: 15px; color: var(--dust); margin-top: 8px; font-weight: 400; letter-spacing: .04em; }
 .principle__text { color: var(--dust); margin: 14px 0 0; font-size: 16px; }
 /* the three principles converge on what they give rise to */
 .emerges { text-align: center; }
-.emerges__lines { display: block; width: 100%; height: 72px; margin-top: 4px; }
-.emerges__lines path { fill: none; stroke: var(--accretion); stroke-width: 1; opacity: .35; vector-effect: non-scaling-stroke; }
-.representation { padding: 18px 0 0; }
-.representation .principle__glyph { margin: 0 auto; display: block; width: 150px; height: 80px; }
+.emerges__stream { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; }
+.emerges__stream path { fill: none; stroke: url(#emerge-beam); stroke-width: 1; }
+.emerges__stream .focus { fill: var(--corona); filter: drop-shadow(0 0 8px rgba(255, 233, 196, .9)); }
+.representation { padding: 10px 0 0; }
+.representation .principle__glyph { margin: 0 auto; display: block; width: 168px; height: 90px; }
 .representation .principle__name { margin-top: 18px; }
 .statement__body {
   margin-top: clamp(56px, 7vw, 88px);
@@ -365,9 +366,9 @@ img.on-dark { filter: invert(.92) hue-rotate(180deg) contrast(1.05); }
   .principles { grid-template-columns: 1fr; }
   .principle, .principle + .principle { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--hair-cool); }
   .emerges { text-align: left; }
-  .emerges__lines { display: none; }
+  .emerges__stream { display: none; }
   .representation { padding: 28px 0; border-bottom: 1px solid var(--hair-cool); }
-  .representation .principle__glyph { margin: 0; width: 120px; height: 64px; }
+  .representation .principle__glyph { margin: 0; width: 144px; height: 77px; }
   .statement__body { grid-template-columns: 1fr; }
 }
 
