@@ -1,11 +1,17 @@
 - year: 2026
   items:
+  - title: 'Reading the Internal Structure of Large Language Models: A Methodological Interface Between Psychoanalysis and Interpretability'
+    url: https://doi.org/10.18529/psychoanal.2026.37.4.67
+    info: Psychoanalysis 37(4), 67-79. 2026. Chang-Eop Kim.
   - title: 'AI models as consciousness attributors: how LLMs ascribe consciousness to other agents'
     url: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1926286/full
-    info: Frontiers in Psychology. 2026 Sep. Bongsu Kang, Chang-Eop Kim*
+    info: Frontiers in Psychology 17, 1926286. 2026 Sep. Bongsu Kang, Chang-Eop Kim*.
+  - title: A Curriculum-Embedded Two-Session AI Chatbot-Based History-Taking Practicum in Korean Medicine Diagnostics
+    url: https://doi.org/10.3390/app16147223
+    info: Applied Sciences 16(14), 7223. 2026 Jul. In-Young Choi, Jundong Kim, Ji-Hwan Kim, Hye-Yoon Lee, Won-Hwan Park, Chang-Eop Kim*, Dong-Woo Lim*.
   - title: 'Network analysis of patient-reported complaints in climacteric syndrome: a single-center study'
     url: https://doi.org/10.1007/s00404-026-08386-3
-    info: Archives of Gynecology and Obstetrics. 2026 Apr. Su-Ji Choi, Bongsu Kang, Chang-Eop Kim*, Dong-Il Kim*.
+    info: Archives of Gynecology and Obstetrics 313(1), 153. 2026. Su-Ji Choi, Bongsu Kang, Chang-Eop Kim*, Dong-Il Kim*.
   - title: 'Understanding Is Not a Scalar: What the Chinese Room Could Not Imagine'
     url: https://philsci-archive.pitt.edu/28365/
     info: PhilSci-Archive. 2026 Feb. Chang-Eop Kim.
