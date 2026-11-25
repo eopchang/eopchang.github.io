@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  {% if page.title and page.url != '/' %}{% assign doc_title = page.title | append: ' | ' | append: site.title %}{% else %}{% assign doc_title = site.title | append: ' | ' | append: site.title_ko %}{% endif %}
+  {% if page.title and page.url != '/' %}{% assign doc_title = page.title | append: ' | ' | append: site.title %}{% else %}{% assign doc_title = site.home_title | default: site.title %}{% endif %}
   <title>{{ doc_title | strip_html }}</title>
   {% assign desc = page.description | default: page.excerpt_text | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 180 %}
   <meta name="description" content="{{ desc | strip_html | strip_newlines | truncate: 180 }}">
   <meta name="theme-color" content="#000000">
+  {% if site.google_site_verification != "" %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
+  {% if site.naver_site_verification != "" %}<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">{% endif %}
+  {% if page.url contains '404' %}<meta name="robots" content="noindex">{% endif %}
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ doc_title | strip_html }}">
   <meta property="og:description" content="{{ desc | strip_html | strip_newlines | truncate: 180 }}">
@@ -26,6 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% if site.feed %}{% endif %}
+  {% if page.url == '/' %}{% include structured-data.html %}{% endif %}
 </head>
 <body class="page-{{ page.page_id | default: page.layout }}">
   <a class="skip" href="#main">본문으로 건너뛰기</a>

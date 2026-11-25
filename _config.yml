@@ -7,9 +7,17 @@
 # ─────────────────────────────────────────────────────────────
 title: NeuroAI Research Group
 title_ko: 이론신경과학 & 계산의학 연구실
+# 검색 결과 첫 화면 제목 (홈)
+home_title: NeuroAI Research Group | 김창업 교수 연구실 · 이론신경과학 & 계산의학 (DGIST)
+# 검색 결과에 보이는 설명 (홈과 별도 설명이 없는 페이지)
 description: >-
-  Theoretical Neuroscience & Computational Medicine Laboratory at DGIST.
-  We study the brain and AI within a single space of principles.
+  DGIST 김창업 교수 연구실(이론신경과학 & 계산의학 연구실, NeuroAI Research Group).
+  뇌와 AI를 하나의 원리 공간에서 연구합니다. Theoretical Neuroscience & Computational
+  Medicine Laboratory led by Chang-Eop Kim at DGIST.
+
+# 검색엔진 소유 확인 코드: Google Search Console / 네이버 서치어드바이저에서 받은 값만 붙여 넣기
+google_site_verification: ""
+naver_site_verification: ""
 url: "https://eopchang.github.io"
 baseurl: ""
 lang: ko
@@ -37,3 +45,4 @@ exclude:
   - tools
   - .github
   - .gitignore
+  - _site

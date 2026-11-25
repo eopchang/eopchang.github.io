@@ -1,0 +1,28 @@
+{% assign lab = site.data.lab %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": {{ lab.name_full | jsonify }},
+  "alternateName": [{{ lab.name | jsonify }}, {{ lab.name_ko | jsonify }}, "김창업 교수 연구실", "Chang-Eop Kim Lab"],
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ '/assets/img/og-lab.jpg' | absolute_url | jsonify }},
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "email": {{ lab.email | jsonify }},
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "DGIST (Daegu Gyeongbuk Institute of Science and Technology)",
+    "url": "https://www.dgist.ac.kr"
+  },
+  "member": {
+    "@type": "Person",
+    "name": "Chang-Eop Kim",
+    "alternateName": "김창업",
+    "jobTitle": "Associate Professor",
+    "affiliation": {{ lab.host | jsonify }},
+    "url": {{ '/members/' | absolute_url | jsonify }},
+    "sameAs": ["https://scholar.google.com/citations?user=EFBztwcAAAAJ"]
+  },
+  "sameAs": ["https://sites.google.com/view/nnsm/home"]
+}
+</script>
